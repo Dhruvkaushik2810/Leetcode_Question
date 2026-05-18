@@ -1,4 +1,4 @@
-// Last updated: 3/13/2026, 11:38:31 AM
+// Last updated: 5/18/2026, 12:34:54 PM
 1/**
 2 * Definition for singly-linked list.
 3 * public class ListNode {
@@ -25,11 +25,10 @@
 24            }
 25            if(t2==null){
 26                t2=headA;
-27            }
-28            else{
-29                t2=t2.next;
-30            }
-31        }
-32        return t1;
-33    }
-34}
+27            }else{
+28                t2=t2.next;
+29            }
+30        }
+31        return t1;
+32    }
+33}
