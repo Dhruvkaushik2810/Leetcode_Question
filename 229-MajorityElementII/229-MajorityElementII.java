@@ -1,4 +1,4 @@
-// Last updated: 7/13/2026, 10:18:53 PM
+// Last updated: 7/21/2026, 10:35:29 PM
 1class Solution {
 2    public List<Integer> majorityElement(int[] nums) {
 3        HashMap<Integer, Integer> map = new HashMap<>();
