@@ -1,4 +1,4 @@
-// Last updated: 7/10/2026, 11:35:07 PM
+// Last updated: 7/22/2026, 10:11:11 PM
 1class Solution {
 2    public int[] rearrangeArray(int[] nums) {
 3        int l=nums.length;
