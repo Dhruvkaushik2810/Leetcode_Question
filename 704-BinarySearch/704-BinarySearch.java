@@ -1,4 +1,4 @@
-// Last updated: 7/23/2026, 10:06:52 PM
+// Last updated: 8/12/2026, 11:12:46 PM
 1class Solution {
 2    public int search(int[] nums, int target) {
 3        int low=0;
