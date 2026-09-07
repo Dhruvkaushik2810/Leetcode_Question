@@ -1,4 +1,4 @@
-// Last updated: 2/9/2026, 8:10:07 PM
+// Last updated: 9/7/2026, 9:20:37 PM
 1class Solution {
 2    public boolean check(int[] nums) {
 3        int n=nums.length;
@@ -7,10 +7,10 @@
 6            if(nums[i]>nums[(i+1)%n]){
 7                count++;
 8            }
-9        }
-10        if(count>1){
-11            return false;
+9            if(count>1){
+10                return false;
+11            }
 12        }
-13        return true;
+13    return true;
 14    }
 15}
