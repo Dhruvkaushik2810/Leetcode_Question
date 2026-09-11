@@ -1,37 +1,30 @@
-// Last updated: 9/11/2026, 2:21:27 PM
+// Last updated: 9/11/2026, 3:05:54 PM
 1class Solution {
-2    public int[] searchRange(int[] nums, int target) {
-3        int low=0;
-4        int high=nums.length-1;
-5        int [] arr = {-1,-1};
-6        while(low<=high){
-7            int mid=low+(high-low)/2;
-8            if(nums[mid]==target){
-9                arr[0]=mid;
-10                high = mid - 1;
-11            }
-12            else if(nums[mid]<target){
-13                low=mid+1;
-14            }
-15            else{
-16                high=mid-1;
-17            }
-18        }
-19        low = 0;
-20        high = nums.length - 1;
-21        while(low<=high){
-22            int mid=low+(high-low)/2;
-23            if(nums[mid]==target){
-24                arr[1]=mid;
-25                low = mid + 1;
-26            }
-27            else if(nums[mid]<target){
-28                low=mid+1;
-29            }
-30            else{
-31                high=mid-1;
-32            }
-33        }
-34        return arr;
-35    }
-36}
+2    public int search(int[] nums, int target) {
+3        int low = 0;
+4        int high = nums.length - 1;
+5        while (low <= high) {
+6            int mid = low + (high - low) / 2;
+7            if (nums[mid] == target) {
+8                return mid;
+9            }
+10            if (nums[low] <= nums[mid]) {
+11                if (nums[low] <= target && target < nums[mid]) {
+12                    high = mid - 1;
+13                } else {
+14                    low = mid + 1;
+15                }
+16            }
+17            else {
+18
+19                if (nums[mid] < target && target <= nums[high]) {
+20                    low = mid + 1;
+21                } else {
+22                    high = mid - 1;
+23                }
+24            }
+25        }
+26        
+27        return -1;
+28    }
+29}
