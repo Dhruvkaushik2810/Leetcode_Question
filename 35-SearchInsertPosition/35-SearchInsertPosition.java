@@ -1,21 +1,37 @@
-// Last updated: 7/31/2026, 9:36:29 PM
+// Last updated: 9/11/2026, 2:21:27 PM
 1class Solution {
-2    public int searchInsert(int[] nums, int target) {
+2    public int[] searchRange(int[] nums, int target) {
 3        int low=0;
 4        int high=nums.length-1;
-5        int mid=0;
+5        int [] arr = {-1,-1};
 6        while(low<=high){
-7            mid=low+(high-low)/2;
+7            int mid=low+(high-low)/2;
 8            if(nums[mid]==target){
-9                return mid;
-10            }
-11            else if(nums[mid]<target){
-12                low=mid+1;
-13            }
-14            else{
-15                high=mid-1;
-16            }
-17        }
-18        return low;
-19    }
-20}
+9                arr[0]=mid;
+10                high = mid - 1;
+11            }
+12            else if(nums[mid]<target){
+13                low=mid+1;
+14            }
+15            else{
+16                high=mid-1;
+17            }
+18        }
+19        low = 0;
+20        high = nums.length - 1;
+21        while(low<=high){
+22            int mid=low+(high-low)/2;
+23            if(nums[mid]==target){
+24                arr[1]=mid;
+25                low = mid + 1;
+26            }
+27            else if(nums[mid]<target){
+28                low=mid+1;
+29            }
+30            else{
+31                high=mid-1;
+32            }
+33        }
+34        return arr;
+35    }
+36}
