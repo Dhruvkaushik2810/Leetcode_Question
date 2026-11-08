@@ -1,4 +1,4 @@
-// Last updated: 10/27/2026, 10:36:07 PM
+// Last updated: 11/8/2026, 11:20:25 PM
 1class Solution {
 2    public ListNode deleteDuplicates(ListNode head) {
 3        ListNode list=new ListNode(-1);
