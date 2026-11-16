@@ -1,4 +1,4 @@
-// Last updated: 1/29/2026, 10:43:01 PM
+// Last updated: 11/16/2026, 10:10:57 PM
 1class Solution {
 2    public int findDuplicate(int[] nums) {
 3        Arrays.sort(nums);
